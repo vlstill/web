@@ -1,5 +1,5 @@
 TEMPLATE=src/template.html
-RESULT_FILES=style.css index.html
+RESULT_FILES=style.css index.html .htaccess
 
 all : ${RESULT_FILES:%=build/%}
 
@@ -9,17 +9,14 @@ build/%.html : src/%.md $(TEMPLATE) build
 build/%.css : src/%.css build
 	cp $< $@
 
-deploy/% : build/% deploy/.htaccess
+build/.htaccess : src/.htaccess build
 	cp $< $@
-
-deploy/.htaccess :
-	mkdir -p deploy
-	test -f $@ || curlftpfs 210149.w49.wedos.net deploy
 
 build :
 	mkdir -p build
 	touch $@
 
-deploy : ${RESULT_FILES:%=deploy/%}
+deploy : all
+	cd build && find -type f -exec curl -n --ftp-create-dirs --ssl -T {} ftp://210149.w49.wedos.net/{} \;
 
-.PHONY : deploy build.dir all
+.PHONY : build all
