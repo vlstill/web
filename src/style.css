@@ -1,0 +1,26 @@
+code {white-space: pre-wrap;}
+span.smallcaps {font-variant: small-caps;}
+span.underline {text-decoration: underline;}
+div.column {display: inline-block; vertical-align: top; width: 50%;}
+q { quotes: "“" "”" "‘" "’"; }
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+#page {
+    padding: 1em;
+    margin: auto;
+    max-width: 80ch;
+    border-width: 1px;
+    border-style: none dotted;
+}
+
+#content {
+    hyphens: auto;
+    text-align: justify;
+}
+
+a:link, a:visited, a:active { text-decoration: none; color: darkred; }
+a:link:hover, a:visited:hover, a:active:hover { text-decoration: none; color: darkblue; }
