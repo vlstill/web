@@ -28,10 +28,13 @@ body {
     padding-top: 0px;
 }
 
-#header {
-    padding: 1em;
+.headfoot {
     margin-bottom: 0px;
     background-color: #F5DD35;
+}
+
+#header {
+    padding: 1em;
     font-size: 115%;
     font-weight: bold;
 }
@@ -42,7 +45,7 @@ body {
     text-decoration: none;
 }
 
-#header #navigation {
+#header #navigation, #foother {
     text-align: right;
 }
 
@@ -51,6 +54,12 @@ body {
     margin-left: 1em;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+#foother {
+    padding: 0.8em 1em;
+    font-size: 80%;
+    color: gray;
 }
 
 #content {

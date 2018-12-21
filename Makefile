@@ -1,12 +1,14 @@
 TEMPLATE=src/template.html
 RESULT_FILES=style.css index.html .htaccess
+YEAR != date '+%Y'
+YEARS != if [ "2018" = "$(YEAR)" ]; then echo $(YEAR); else echo "2018 – $(YEAR)"; fi
 
 all : build
 
 build : ${RESULT_FILES:%=_build/%}
 
 _build/%.html : src/%.md $(TEMPLATE) _build
-	pandoc $< -s --template=$(TEMPLATE) -t html5 -o $@
+	pandoc $< -V year=$(YEAR) -V years=$(YEARS) -s --template=$(TEMPLATE) -t html5 -o $@
 
 _build/%.css : src/%.css _build
 	cp $< $@
