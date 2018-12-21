@@ -10,11 +10,47 @@ body {
 }
 
 #page {
-    padding: 1em;
     margin: auto;
     max-width: 80ch;
     border-width: 1px;
     border-style: none dotted;
+}
+
+@media ( max-width: 82ch ), ( max-device-width: 82ch ) {
+	#page {
+		border-style: none;
+		max-width: none;
+	}
+}
+
+#content {
+    padding: 1em;
+    padding-top: 0px;
+}
+
+#header {
+    padding: 1em;
+    margin-bottom: 0px;
+    background-color: #F5DD35;
+    font-size: 115%;
+    font-weight: bold;
+}
+
+#header #logo a {
+    color: inherit;
+    float: left;
+    text-decoration: none;
+}
+
+#header #navigation {
+    text-align: right;
+}
+
+#header #navigation a {
+    color: inherit;
+    margin-left: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 #content {
