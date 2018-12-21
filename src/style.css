@@ -60,3 +60,8 @@ body {
 
 a:link, a:visited, a:active { text-decoration: none; color: darkred; }
 a:link:hover, a:visited:hover, a:active:hover { text-decoration: none; color: darkblue; }
+
+h1 { font-size: 125%; }
+h2 { font-size: 115%; }
+h3 { font-size: 107%; }
+h4 { font-size: 100%; }
