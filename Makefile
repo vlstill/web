@@ -17,6 +17,6 @@ build :
 	touch $@
 
 deploy : all
-	cd build && find -type f -exec curl -n --ftp-create-dirs --ssl -T {} ftp://210149.w49.wedos.net/{} \;
+	cd build && find -type f -exec curl -n --ftp-create-dirs --ssl-reqd -T {} ftp://210149.w49.wedos.net/{} \;
 
 .PHONY : build all
