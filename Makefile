@@ -1,22 +1,24 @@
 TEMPLATE=src/template.html
 RESULT_FILES=style.css index.html .htaccess
 
-all : ${RESULT_FILES:%=build/%}
+all : build
 
-build/%.html : src/%.md $(TEMPLATE) build
+build : ${RESULT_FILES:%=_build/%}
+
+_build/%.html : src/%.md $(TEMPLATE) _build
 	pandoc $< -s --template=$(TEMPLATE) -t html5 -o $@
 
-build/%.css : src/%.css build
+_build/%.css : src/%.css _build
 	cp $< $@
 
-build/.htaccess : src/.htaccess build
+_build/.htaccess : src/.htaccess _build
 	cp $< $@
 
-build :
-	mkdir -p build
+_build :
+	mkdir -p _build
 	touch $@
 
-deploy : all
-	cd build && find -type f -exec curl -n --ftp-create-dirs --ssl-reqd -T {} ftp://210149.w49.wedos.net/{} \;
+deploy : build
+	cd _build && find -type f -exec curl -n --ftp-create-dirs --ssl-reqd -T {} ftp://210149.w49.wedos.net/{} \;
 
-.PHONY : build all
+.PHONY : build deploy all
