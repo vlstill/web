@@ -39,13 +39,16 @@ body {
     font-weight: bold;
 }
 
+.menuleft {
+    float: left;
+}
+
 #header #logo a {
     color: inherit;
-    float: left;
     text-decoration: none;
 }
 
-#header #navigation, #foother {
+.menuright {
     text-align: right;
 }
 
