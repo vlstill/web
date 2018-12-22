@@ -20,7 +20,7 @@ My hobbies include programming (mostly in C++ and Haskell), photography of natur
 -    [DIVINE][divine], a program analysis tool developed in the [ParaDiSe](https://paradise.fi.muni.cz) laboratory.
      Focuses on analysis of C and C++ programs.
 *    [hsExprTest][hsExprTest], a tool for automatic comparisons of Haskell expressions and a building block for testing other programming languages.
-    It focuses mostly on testing of students who are submitting their tasks through e-learing facilities in information system of Masaryk University.
+    It focuses mostly on testing of students who are submitting their tasks through e-learning facilities in information system of Masaryk University.
 *    More of my projects can be found on my [GitHub page][github].
 
 ## Teaching
