@@ -1,7 +1,7 @@
 TEMPLATE=src/template.html
 RESULT_FILES=style.css index.html .htaccess
 YEAR != date '+%Y'
-YEARS != if [ "2018" = "$(YEAR)" ]; then echo $(YEAR); else echo "2018 – $(YEAR)"; fi
+YEARS != if [ "2018" = "$(YEAR)" ]; then echo $(YEAR); else echo "2018–$(YEAR)"; fi
 
 all : build
 
