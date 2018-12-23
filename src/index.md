@@ -9,11 +9,11 @@ My research topic is program analysis, more specifically analysis of parallel pr
 My work includes research of new analysis techniques and their implementation in the [DIVINE][divine] model checker.
 My most important contribution so far was adding support for discovery of bugs caused by relaxed memory behaviour.
 This also resulted in a publication [Model Checking of C++ Programs Under the x86-TSO Memory Model](https://divine.fi.muni.cz/2018/x86tso/).
+
 Apart from Ph.D. research I am also involved in teaching several courses on our faculty, mostly in programming and formal languages.
 Furthermore, I maintain an evaluation engine for programming courses, [hsExprTest][hsExprTest].
-You can find more information about my research on the website of the [DIVINE][divine] model checker and about my other work mostly on my [GitHub][github].
 
-My hobbies include programming (mostly in C++ and Haskell), photography of nature, walking, and organizing games with my friends from [Nordic Animals Association (CZ)](http://zverinec.fi.muni.cz/).
+My hobbies include programming (mostly in C++ and Haskell), photography of nature, walking, and organizing games with my friends from [Nordic Animals Association<span class="cz">(CZ)</span>][zverinec].
 
 ## My Projects
 
@@ -23,6 +23,7 @@ My hobbies include programming (mostly in C++ and Haskell), photography of natur
 *   [hsExprTest][hsExprTest], a tool for automatic comparisons of Haskell expressions and a building block for testing other programming languages.
     It focuses mostly on testing of students who are submitting their tasks through e-learning facilities in information system of Masaryk University.
     The project was first used in 2014 and I am extending it since then.
+*   I am involved in organizing several free-time activities under the [Nordic Animals Association<span class="cz">(CZ)</span>][zverinec], most importantly the [InterLoS<span class="cz">(CZ)</span>](https://interlos.fi.muni.cz) internet game with puzzles/ciphers and programming tasks, and [KSI<span class="cz">(CZ)</span>](https://ksi.fi.muni.cz) which is an online programming seminar for students who are thinking about studying computer science at the university.
 *   More of my projects can be found on my [GitHub page][github].
 
 ## Teaching
@@ -44,6 +45,8 @@ My hobbies include programming (mostly in C++ and Haskell), photography of natur
 
 *   I had also minor involvement in other courses, such as [PB071 Introduction to the C language](https://is.muni.cz/course/fi/autumn2012/PB071) (seminar tutor, homework author; 2012), [PB161 C++ Programming](https://is.muni.cz/course/fi/autumn2018/PB161) (homework author, backup lecturer; 2016--2018), and [IA006 Selected topics on automata theory](https://is.muni.cz/course/fi/autumn2017/IA006) (marking exams; 2016--2017).
 
+
+[zverinec]: http://zverinec.fi.muni.cz/
 [divine]: https://divine.fi.muni.cz
 [hsExprTest]: https://github.com/vlstill/hsExprTest
 [github]: https://github.com/vlstill
