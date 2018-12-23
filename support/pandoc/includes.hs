@@ -4,10 +4,10 @@
 >>> pandoc test.md --filter includes.hs -o test.pdf
 
 test.md:
-    Here's the pandoc README:
-
 @
-```{.md .include}
+Add content of README.md as markdown
+
+```{.input}
 README.md
 ```
 
@@ -27,22 +27,26 @@ test.c:3-3
 
 module Main where
 
+import Text.Pandoc
+import Text.Pandoc.Error
 import Text.Pandoc.JSON
 import Control.Exception ( IOException, handle )
 import System.IO ( hPutStrLn, stderr )
 import System.Exit ( exitFailure )
 import Text.Read ( readMaybe )
 import Data.List ( lines, unlines )
+import qualified Data.Text.IO as T ( readFile )
 
-doInclude :: Block -> IO Block
+doInclude :: Block -> IO [Block]
 doInclude cb@(CodeBlock (id, classes, namevals) files)
   | "include" `elem` classes = do
         contents <- getFiles files
-        pure $ CodeBlock (id, classes', namevals) contents
-  | otherwise = pure cb
+        pure [CodeBlock (id, classes', namevals) contents]
+  | "input" `elem` classes || "inputmd" `elem` classes = concat <$> mapM inputMD (lines files)
+  | otherwise = pure [cb]
   where
     classes' = filter (/= "include") classes
-doInclude x = return x
+doInclude x = pure [x]
 
 getFiles :: String -> IO String
 getFiles files = concat <$> mapM getFile (lines files)
@@ -53,9 +57,6 @@ getFile fileLines = case break (== ':') fileLines of
     (file, ':':range) -> getLines file range
     (file, []) -> readFileOrDie file
     _ -> die $ "unknown file include defintion " ++ fileLines
-
-readFileOrDie :: FilePath -> IO String
-readFileOrDie file = handle (ioe file) $ readFile file
 
 getLines :: FilePath -> String -> IO String
 getLines file range = case break (== '-') range of
@@ -70,6 +71,23 @@ getEmpty :: String -> IO String
 getEmpty str = case readMaybe str of
     Just cnt -> pure . unlines $ replicate cnt ""
     Nothing -> die $ "Could not parse empty line count '" ++ str ++ "'"
+
+stripPandoc :: Either PandocError Pandoc -> IO [Block]
+stripPandoc p = case p of
+    Left err -> die $ "Pandoc error in input: " ++ show err
+    Right (Pandoc _ blocks) -> pure blocks
+
+inputMD :: FilePath -> IO [Block]
+inputMD file = do
+    cont <- readFileOrDie' T.readFile file
+    stripPandoc . runPure $ readMarkdown def cont
+
+readFileOrDie' :: (FilePath -> IO a) -> FilePath -> IO a
+readFileOrDie' rf file = handle (ioe file) $ rf file
+
+readFileOrDie :: FilePath -> IO String
+readFileOrDie = readFileOrDie' readFile
+
 
 ioe :: FilePath -> IOException -> IO a
 ioe file ex = die $ "Could not open included code file " ++ file ++ ", " ++ show ex
