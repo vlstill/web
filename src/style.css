@@ -16,7 +16,7 @@ body {
     border-style: none dotted;
 }
 
-@media ( max-width: 82ch ), ( max-device-width: 82ch ) {
+@media ( max-width: 84ch ), ( max-device-width: 84ch ) {
 	#page {
 		border-style: none;
 		max-width: none;
