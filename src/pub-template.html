@@ -1,0 +1,24 @@
+<h2 id="publications">Publications</h2>
+
+<div id="publist">
+$for(references)$
+<h3 class="year">$references.year$</h3>
+$for(references.data)$
+    <p>
+        $for(references.data.author)$$references.data.author.given$ $references.data.author.family$$sep$, $endfor$:<br />
+        <strong>$references.data.title$</strong>,<br />
+        <em>
+            $if(references.data.genre)$$references.data.genre$, $endif$
+            $if(references.data.container-title)$$references.data.container-title$, $endif$
+        </em>
+        $for(references.data.issued)$$references.data.issued.year$$endfor$.
+        [<a href="publications/bib/$references.data.id$.bib">BIB</a>]
+        $if(references.data.pdf)$[<a href="publications/$references.data.pdf$">PDF</a>]$endif$
+        $if(references.data.URL)$[<a href="$references.data.URL$">URL</a>]
+        $else$$if(references.data.DOI)$[<a href="http://dx.doi.org/$references.data.DOI$">URL</a>]$endif$
+        $endif$
+        $if(references.data.note)$[<a href="$references.data.note$">paper page</a>]$endif$
+    </p>
+$endfor$
+$endfor$
+</div>

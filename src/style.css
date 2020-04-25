@@ -82,3 +82,24 @@ h1 { font-size: 125%; }
 h2 { font-size: 115%; }
 h3 { font-size: 107%; }
 h4 { font-size: 100%; }
+
+/* publist styles */
+
+#publist .year {
+    display: block;
+    background-color: #F5DD3599;
+    margin: 0.4em 0 0.4em 0;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 1px;
+}
+
+#publist p {
+    margin: 0px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#publist p + p {
+    border-top: 1px solid #F5DD3599;
+}

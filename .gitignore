@@ -1,1 +1,3 @@
 _build
+.mypy_cache
+_tmp
