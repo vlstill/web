@@ -13,6 +13,7 @@ Under the x86-TSO Memory Model](https://divine.fi.muni.cz/2018/x86tso/)) and for
 detection of local nontermination in parallel programs (published as [Local
 Nontermination Detection for Parallel C++
 Programs](https://divine.fi.muni.cz/2019/lnterm/)).
+You can see more of my publications of the [publications' page](publications.html).
 
 Apart from Ph.D. research I am also involved in teaching several courses on our faculty, mostly in programming and formal languages.
 Furthermore, I maintain an evaluation engine for programming courses, [hsExprTest][hsExprTest].
