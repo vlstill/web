@@ -13,6 +13,9 @@ _build/%.html : src/%.md $(TEMPLATE) _build
 _build/%.css : src/%.css _build
 	cp $< $@
 
+_build/%.svg : src/%.svg _build
+	cp $< $@
+
 _build/.htaccess : src/.htaccess _build
 	cp $< $@
 
