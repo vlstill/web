@@ -13,7 +13,8 @@ body {
     margin: auto;
     max-width: 80ch;
     border-width: 1px;
-    border-style: none dotted;
+    border-style: none solid;
+    border-color: #F5DD35;
 }
 
 @media ( max-width: 84ch ), ( max-device-width: 84ch ) {
