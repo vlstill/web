@@ -22,7 +22,7 @@ def get_pdf(ref):
 
 SPAN = re.compile(r'^<span[^>]*>')
 
-orig = yaml.load(sys.stdin)['references']
+orig = yaml.safe_load(sys.stdin)['references']
 by_year_dict = {}
 for e in orig:
     year = e['issued'][0]['year']
