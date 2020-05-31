@@ -17,6 +17,7 @@ all : build
 build : ${RESULT_FILES:%=_build/%}
 
 _build/%.html : src/%.md $(TEMPLATE) _build
+	mkdir -p $(dir $@)
 	$(PANDOC) $< -o $@
 
 _build/%.css : src/%.css _build
