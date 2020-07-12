@@ -30,7 +30,7 @@ jobs:
       run: |
         git fetch --all
         git worktree add ../build gh-pages
-        rm ../build/* ../build/.gitignore -rf
+        rm $(echo ../build/* ../build/.gitignore | grep -v CNAME) -rf
         ln -s ../build _build
 
     - name: Build
