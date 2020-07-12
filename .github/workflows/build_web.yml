@@ -31,6 +31,7 @@ jobs:
         git worktree add -B gh-pages ../build
         rm ../build/* ../build/.gitignore -rf
         ln -s ../build _build
+        (cd ../build && git pull)
 
     - name: Build
       run: make
