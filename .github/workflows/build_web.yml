@@ -28,7 +28,7 @@ jobs:
     
     - name: Checkout pages
       run: |
-        git worktree add $(git branch -a | grep gh-pages || echo "-B") gh-pages ../build
+        git worktree add gh-pages ../build
         rm ../build/* ../build/.gitignore -rf
         ln -s ../build _build
 
@@ -45,4 +45,4 @@ jobs:
         git config --global user.name "Vladimír Štill's autocommit"
         git status
         git commit -m "Build $(date +'%Y-%m-%d_%H:%M:%S')"
-        git push origin gh-pages
+        git push
