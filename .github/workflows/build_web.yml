@@ -36,6 +36,7 @@ jobs:
 
     - name: Deploy pages
       run: |
+        set -x
         ls _build
         cd _build
         ls
