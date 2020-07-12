@@ -40,7 +40,7 @@ jobs:
         set -x
         cd ../build
         ls
-        git stage *
+        git stage -a
         git config --global user.email "git-auto@vstill.eu"
         git config --global user.name "Vladimír Štill's autocommit"
         git status
