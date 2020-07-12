@@ -29,7 +29,7 @@ jobs:
     - name: Checkout pages
       run: |
         git worktree add -B gh-pages _build
-        rm _build/* _build/.* -rf
+        rm _build/* _build/.git* -rf
 
     - name: Build
       run: make
