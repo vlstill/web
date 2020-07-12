@@ -28,7 +28,7 @@ jobs:
     
     - name: Checkout pages
       run: |
-        git worktree add gh-pages ../build
+        git worktree add ../build gh-pages
         rm ../build/* ../build/.gitignore -rf
         ln -s ../build _build
 
