@@ -34,9 +34,12 @@ jobs:
 
     - name: Deploy pages
       run: |
+        ls _build
         cd _build
+        ls
         git stage *
         git config --global user.email "git-auto@vstill.eu"
         git config --global user.name "Vladimír Štill's autocommit"
+        git status
         git commit -m "Build $(date +'%Y-%m-%d_%H:%M:%S')"
         git push origin gh-pages
