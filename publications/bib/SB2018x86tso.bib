@@ -1,0 +1,16 @@
+@inproceedings{SB2018x86tso,
+ abstract = {In this work, we present an extension of the DIVINE model checker that allows for analysis of C and C++ programs under the relaxed memory model. We use an approach in which the program to be verified is first transformed, so that it itself encodes the relaxed memory behavior, and after that it is verified by an explicit-state model checker supporting only the standard sequentially consistent memory. The novelty of our approach is in a careful design of an encoding of operations so that the nondeterminism introduced by the relaxed memory simulation is minimized. In particular, we allow for nondeterminism only in connection with memory fences and load operations of those memory addresses that were written to by a preceding store. We evaluate and compare our approach with the state-of-the-art bounded model checker CBMC and stateless model checker Nidhugg. For the comparison we employ SV-COMP concurrency benchmarks that do not exhibit data nondeterminism, and we show that our solution built on top of the explicit-state model checker outperforms both of the other tools. The implementation is publicly available as an open source software.},
+ address = {Cham},
+ author = {Vladimír Štill and Jiří Barnat},
+ booktitle = {{Formal Methods and Software Engineering}},
+ doi = {10.1007/978-3-030-02450-5_8},
+ editor = {Sun, Jing and Sun, Meng},
+ isbn = {978-3-030-02450-5},
+ keywords = {divine},
+ note = {https://divine.fi.muni.cz/2018/x86tso},
+ pages = {124--140},
+ publisher = {Springer International Publishing},
+ title = {{Model Checking of C++ Programs Under the x86-TSO Memory Model}},
+ year = {2018}
+}
+

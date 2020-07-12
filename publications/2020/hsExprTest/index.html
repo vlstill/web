@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+        <meta name="author" content="Vladimír Štill">
+        <title>Automatic Test Generation for Haskell Programming Assignments</title>
+        <link rel="stylesheet" href="/style.css">
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div id="page">
+            <div id="header" class="headfoot">
+                <div id="logo" class="menuleft">
+                    <a href="/">Vladimír Štill</a>
+                </div>
+                <div id="navigation" class="menuright">
+                    <a href="/publications.html">Publications</a>
+                </div>
+            </div>
+            <div id="content">
+                        <h1>Automatic Test Generation for Haskell Programming Assignments</h1>
+            <p><em>This is an accompanying page for the poster presentation at <a href="https://iticse.acm.org/">ITiCSE 2020</a>.</em></p>
+<h2 id="abstract">Abstract</h2>
+<p>Automatic testing of programming assignments is highly desirable as it can provide fast feedback for the students and allows the teachers to teach efficiently even in courses with many students. However, writing tests for students’ solutions can be tedious. In this work, we present a novel approach to test generation for small Haskell assignments. Such assignments usually consist of one function (with the possibility to use helper functions in its definition) that the students are supposed to program according to a teacher’s specification. The teacher is not required to write tests for this function. Instead, we make use of an example solution, which the teacher should have to assess the difficulty of the assignment. Using the example solution, and (if needed) a specification of input values for the function, our tool can automatically generate randomized tests. If these tests fail, the student is presented with a counterexample which shows the input values, the expected output of the tested function and the output computed by their solution.</p>
+<h2 id="artefacts">Artefacts</h2>
+<ul>
+<li>the poster paper: <a href="https://doi.org/10.1145/3341525.3393972">official version</a> and <a href="http://www.vstill.eu/publications/2020/hsExprTest.pdf">author’s version</a></li>
+<li><a href="http://www.vstill.eu/publications/2020/hsExprTest/poster.pdf">the actual poster</a></li>
+<li><a href="https://github.com/vlstill/hsExprTest">hsExprTest (the presented tool) is available at GitHub</a></li>
+</ul>
+            </div>
+            <div id="foother" class="headfoot">
+                <div class="menuleft">
+                    [<a href="https://github.com/vlstill/web">source on GitHub</a>]
+                </div>
+                <div class="menuright">
+                    © Vladimír Štill, 2018–2020
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<!-- vim: expandtab
+-->
