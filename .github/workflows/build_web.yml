@@ -14,7 +14,9 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on:	ubuntu-20.04
-
+    env:
+      LANG: en_US.UTF-8
+    
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -28,7 +30,7 @@ jobs:
       run: git worktree add -b pages _build
 
     - name: Build
-      run: LOCALE=en_US.UTF-8 make
+      run: make
 
     - name: Deploy pages
       run: |
