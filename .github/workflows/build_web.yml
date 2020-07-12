@@ -28,8 +28,9 @@ jobs:
     
     - name: Checkout pages
       run: |
-        git worktree add -B gh-pages _build
-        rm _build/* _build/.git* -rf
+        git worktree add -B gh-pages ../build
+        rm ../build/* ../build/.gitignore -rf
+        ln -s ../build _build
 
     - name: Build
       run: make
@@ -37,8 +38,7 @@ jobs:
     - name: Deploy pages
       run: |
         set -x
-        ls _build
-        cd _build
+        cd ../build
         ls
         git stage *
         git config --global user.email "git-auto@vstill.eu"
