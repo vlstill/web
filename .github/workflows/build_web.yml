@@ -22,7 +22,7 @@ jobs:
     - run: cd $GITHUB_WORKSPACE
       
     - name: Prerequisites
-      run: sudo apt-get install -yy pandoc
+      run: sudo apt-get install -yy pandoc pandoc-citeproc python3-bibtexparser
     
     - name: Checkout pages
       run: git worktree add -b pages _build
