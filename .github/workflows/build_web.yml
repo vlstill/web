@@ -27,7 +27,9 @@ jobs:
       run: sudo apt-get install -yy pandoc pandoc-citeproc python3-bibtexparser
     
     - name: Checkout pages
-      run: git worktree add -B gh-pages _build
+      run: |
+        git worktree add -B gh-pages _build
+        rm _build/* _build/.* -rf
 
     - name: Build
       run: make
