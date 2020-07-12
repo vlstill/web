@@ -27,7 +27,7 @@ jobs:
       run: sudo apt-get install -yy pandoc pandoc-citeproc python3-bibtexparser
     
     - name: Checkout pages
-      run: git worktree add -b pages _build
+      run: git worktree add -B pages _build
 
     - name: Build
       run: make
@@ -36,5 +36,7 @@ jobs:
       run: |
         cd _build
         git stage *
+        git config --global user.email "git-auto@vstill.eu"
+        git config --global user.name "Vladimír Štill's autocommit"
         git commit -m "Build $(date +'%Y-%m-%d_%H:%M:%S')"
         git push
