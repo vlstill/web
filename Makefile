@@ -20,7 +20,8 @@ build : ${RESULT_FILES:%=_build/%}
 
 _build/%.html : src/%.md $(TEMPLATE) _build
 	mkdir -p $(dir $@)
-	$(PANDOC) -V level=$(shell echo $(dir $(<:src/%.md=%)) | sed -e 's,/$$,,' -e 's/[^/]*/../g' -e 's/^[.][.]$$/./') $< -o $@
+	$(info $(dir $(<:src/%.md=%)))
+	$(PANDOC) -V level=$(shell echo $(dir $(<:src/%.md=%)) | sed -e 's,/$$,,' -e 's/[^/.]\+/../g') $< -o $@
 
 _build/%.css : src/%.css _build
 	cp $< $@
