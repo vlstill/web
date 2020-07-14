@@ -18,30 +18,26 @@ all : build
 
 build : ${RESULT_FILES:%=_build/%}
 
-_build/%.html : src/%.md $(TEMPLATE) _build
+_build/%.html : src/%.md $(TEMPLATE)
 	mkdir -p $(dir $@)
-	$(info $(dir $(<:src/%.md=%)))
 	$(PANDOC) -V level=$(shell echo $(dir $(<:src/%.md=%)) | sed -e 's,/$$,,' -e 's/[^/.]\+/../g') $< -o $@
 
-_build/%.css : src/%.css _build
+_build/%.css : src/%.css
 	cp $< $@
 
-_build/%.svg : src/%.svg _build
+_build/%.svg : src/%.svg
 	cp $< $@
 
-_build/.htaccess : src/.htaccess _build
+_build/.htaccess : src/.htaccess
 	cp $< $@
-
-_build :
-	mkdir -p _build
-	touch $@
 
 _build/publications/%.pdf : pub/pdf/%.pdf
 	mkdir -p $(dir $@)
 	cp $< $@
 
 _build/publications.html : ${TMPDIR}/publications.yml $(TEMPLATE) \
-						   ${PUB_SPLIT} ${PUB_TEMPLATE} _build
+						   ${PUB_SPLIT} ${PUB_TEMPLATE}
+	mkdir -p _build
 	pandoc $< --metadata title=Publications --template ${PUB_TEMPLATE} -t html5 -f markdown+smart \
 		| $(PANDOC) -V level=. --metadata title=Publications -f html -o $@
 	mkdir -p _build/publications/bib
@@ -53,7 +49,7 @@ ${TMPDIR}/publications.yml : $(PUB_BIB) $(PUB_PROCESS) \
 	pandoc-citeproc --bib2yaml ${PUB_BIB} | ${PUB_PROCESS} pub/pdf > $@
 
 deploy : build
-	cd _build && find -type f -exec curl -n --ftp-create-dirs --ssl-reqd -T {} ftp://210149.w49.wedos.net/{} \;
+	cd _build && find -type f -print -exec curl -n --ftp-create-dirs --ssl-reqd -T {} ftp://210149.w49.wedos.net/{} \;
 
 install-prereq :
 	pip3 install --user bibtexparser
