@@ -18,7 +18,7 @@ You can see more of my publications of the [publications' page](publications.htm
 Apart from Ph.D. research I am also involved in teaching several courses on our faculty, mostly in programming and formal languages.
 Furthermore, I maintain an evaluation engine for programming courses, [hsExprTest][hsExprTest].
 
-My hobbies include programming (mostly in C++, Haskell, and Python), photography of nature, walking, and organizing games with my friends from [Nordic Animals Association<span class="cz">(CZ)</span>][zverinec].
+My hobbies include programming (mostly in C++, Python, Perl, and Haskell), walking, photography of nature, and organizing games with my friends from [Nordic Animals Association<span class="cz">(CZ)</span>][zverinec].
 
 ## My Projects
 
