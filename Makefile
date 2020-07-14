@@ -1,5 +1,7 @@
 TEMPLATE=src/template.html
-RESULT_FILES=style.css index.html .htaccess publications.html publications/2020/hsExprTest/index.html
+RESULT_FILES=style.css .htaccess \
+	index.html publications.html \
+	publications/2020/hsExprTest/index.html
 YEAR != date '+%Y'
 YEARS != if [ "2018" = "$(YEAR)" ]; then echo $(YEAR); else echo "2018–$(YEAR)"; fi
 PANDOC = pandoc -V year=$(YEAR) -V years=$(YEARS) -s --template=$(TEMPLATE) -t html5
@@ -18,7 +20,7 @@ build : ${RESULT_FILES:%=_build/%}
 
 _build/%.html : src/%.md $(TEMPLATE) _build
 	mkdir -p $(dir $@)
-	$(PANDOC) $< -o $@
+	$(PANDOC) -V level=$(shell echo $(dir $(<:src/%.md=%)) | sed -e 's,/$$,,' -e 's/[^/]*/../g' -e 's/^[.][.]$$/./') $< -o $@
 
 _build/%.css : src/%.css _build
 	cp $< $@
@@ -37,10 +39,10 @@ _build/publications/%.pdf : pub/pdf/%.pdf
 	mkdir -p $(dir $@)
 	cp $< $@
 
-_build/publications.html : ${TMPDIR}/publications.yml \
+_build/publications.html : ${TMPDIR}/publications.yml $(TEMPLATE) \
 						   ${PUB_SPLIT} ${PUB_TEMPLATE} _build
 	pandoc $< --metadata title=Publications --template ${PUB_TEMPLATE} -t html5 -f markdown+smart \
-		| $(PANDOC) --metadata title=Publications -f html -o $@
+		| $(PANDOC) -V level=. --metadata title=Publications -f html -o $@
 	mkdir -p _build/publications/bib
 	${PUB_SPLIT} _build/publications/bib ${PUB_BIB}
 
