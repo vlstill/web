@@ -1,7 +1,8 @@
 TEMPLATE=src/template.html
-RESULT_FILES=style.css .htaccess \
+IMGS=$(wildcard img/*.svg)
+RESULT_FILES=style.css .htaccess $(IMGS) \
 	index.html publications.html \
-	publications/2020/hsExprTest/index.html
+	phd/index.html publications/2020/hsExprTest/index.html
 YEAR != date '+%Y'
 YEARS != if [ "2018" = "$(YEAR)" ]; then echo $(YEAR); else echo "2018–$(YEAR)"; fi
 PANDOC = pandoc -V year=$(YEAR) -V years=$(YEARS) -s --template=$(TEMPLATE) -t html5
