@@ -6,6 +6,7 @@ vim: spelllang=en spell fo-=t tw=80 expandtab
 ---
 
 * [Ph.D. Thesis PDF](https://vlstill.github.io/phd-thesis/thesis.pdf)
+* [Ph.D. Thesis PDF -- print version (without colored links)](https://vlstill.github.io/phd-thesis/thesis-print.pdf)
 
 ### Most Significant Publications
 
