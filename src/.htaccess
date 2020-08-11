@@ -41,6 +41,8 @@ AddCharset UTF-8 .html .php .txt .md .css
 ### Header set Cache-Control "private, max-age=10, must-revalidate"
 ### </ifModule>
 
+Redirect 307 /projects/exprtest/ https://github.com/vlstill/hsExprTest
+
 <IfModule mod_headers.c>
 Header set Cache-Control "no-cache, no-store, must-revalidate"
 Header set Pragma "no-cache"
