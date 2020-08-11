@@ -2,7 +2,7 @@
 
 <div id="publist">
 $for(references)$
-<h3 class="year">$references.year$</h3>
+<h3 class="year" id="$references.year$">$references.year$</h3>
 $for(references.data)$
     <p>
         $for(references.data.author)$$references.data.author.given$ $references.data.author.family$$sep$, $endfor$:<br />
