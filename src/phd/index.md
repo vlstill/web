@@ -49,3 +49,7 @@ The contributions presented in this thesis are implemented in an open-source sof
   [[publisher's page](http://dx.doi.org/10.1007/978-3-319-68167-2_14)]
 
 The complete list of my publications during my PhD and previous studies can be found on the [publications page (up to the year 2019)](/publications.html#2019).
+
+### Miscellaneous
+
+The source code of the thesis is available [on GitHub](https://github.com/vlstill/phd-thesis/).
