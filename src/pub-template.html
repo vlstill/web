@@ -12,8 +12,8 @@ $for(references.data)$
             $if(references.data.container-title)$$references.data.container-title$, $endif$
         </em>
         $for(references.data.issued)$$references.data.issued.year$$endfor$.
-        [<a href="publications/bib/$references.data.id$.bib">BIB</a>]
         $if(references.data.pdf)$[<a href="publications/$references.data.pdf$">PDF</a>]$endif$
+        [<a href="publications/bib/$references.data.id$.bib">BIB</a>]
         $if(references.data.URL)$[<a href="$references.data.URL$">URL</a>]
         $else$$if(references.data.DOI)$[<a href="http://dx.doi.org/$references.data.DOI$">URL</a>]$endif$
         $endif$
