@@ -20,29 +20,36 @@ all : build
 build : ${RESULT_FILES:%=_build/%}
 
 _build/%.html : src/%.md $(TEMPLATE)
-	mkdir -p $(dir $@)
+	@mkdir -p $(dir $@)
 	$(PANDOC) -V level=$(shell echo $(dir $(<:src/%.md=%)) | sed -e 's,/$$,,' -e 's/[^/.]\+/../g') $< -o $@
 
 _build/%.css : src/%.css
+	@mkdir -p $(dir $@)
 	cp $< $@
 
 _build/%.svg : src/%.svg
+	@mkdir -p $(dir $@)
 	cp $< $@
 
 _build/.htaccess : src/.htaccess
+	@mkdir -p $(dir $@)
 	cp $< $@
 
 _build/publications/%.pdf : pub/pdf/%.pdf
-	mkdir -p $(dir $@)
+	@mkdir -p $(dir $@)
 	cp $< $@
 
 _build/publications.html : ${TMPDIR}/publications.yml $(TEMPLATE) \
 						   ${PUB_SPLIT} ${PUB_TEMPLATE}
-	mkdir -p _build
+	@mkdir -p $(dir $@)
 	pandoc $< --metadata title=Publications --template ${PUB_TEMPLATE} -t html5 -f markdown+smart \
 		| $(PANDOC) -V level=. --metadata title=Publications -f html -o $@
 	mkdir -p _build/publications/bib
 	${PUB_SPLIT} _build/publications/bib ${PUB_BIB}
+
+_build/img/% : img/%
+	@mkdir -p $(dir $@)
+	cp $< $@
 
 ${TMPDIR}/publications.yml : $(PUB_BIB) $(PUB_PROCESS) \
 							${PUB_PDF:pub/pdf/%=_build/publications/%} ${PUB_PDF_REF}
