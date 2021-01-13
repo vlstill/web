@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+        <meta name="author" content="Vladimír Štill">
+        <title>Analysis of Parallel C++ Programs (Ph.D. Thesis)</title>
+        <link rel="stylesheet" href="../style.css">
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div id="page">
+            <div id="header" class="headfoot">
+                <div id="logo" class="menuleft">
+                    <a href="../">Vladimír Štill</a>
+                </div>
+                <div id="navigation" class="menuright">
+                    <a href="../publications.html">Publications</a>
+                </div>
+            </div>
+            <div id="content">
+                        <h1>Analysis of Parallel C++ Programs (Ph.D. Thesis)</h1>
+            <ul>
+<li><a href="https://is.muni.cz/th/r9kjw/?lang=en">Official Thesis Submission Archive</a></li>
+<li><a href="https://vlstill.github.io/phd-thesis/thesis.pdf">Ph.D. Thesis PDF</a></li>
+<li><a href="https://vlstill.github.io/phd-thesis/thesis-print.pdf">Ph.D. Thesis PDF – print version (without colored links)</a></li>
+</ul>
+<h3 id="abstract">Abstract</h3>
+<p>Parallel software offers a promise of full utilisation of modern hardware. Unfortunately, building a parallel program presents some additional challenges for the programmers. In this thesis, we introduce some improvements to the analysis of parallel C++ programs. In particular, we aim to help with the discovery of hard-to-find bugs.</p>
+<p>As our first contribution, we deal with some of the problems related to analysis of high-level programming languages, including their advanced features and standard libraries. We consider this topic important as comprehensive language support makes the analysis tool more usable by programmers in practice. Comprehensive language support is not an easy task. However, we show it is still manageable with the right combination of reuse of existing execution-oriented components and design of new, verification-oriented ones. In this work, we deal with C++ support for the DIVINE verifier in general, and its support for C++ exceptions in particular.</p>
+<p>Our second contribution is a novel approach to the analysis of programs running under the relaxed memory model of Intel and AMD x86 processors. These processors can delay memory stores after independent loads which can lead to peculiar behaviour of parallel programs. This behaviour is often hard to keep track by programmers and therefore can be a source of subtle bugs. We propose a novel way in which the verifier can simulate relaxed memory. Our method aims to minimise introduced nondeterminism and therefore increase the overall performance of the verification.</p>
+<p>As our last contribution, we introduce a method for checking local nontermination of parallel programs, i.e., for detection of sections of the program that are supposed to terminate but do not. The local nontermination can be used to detect problems in programs that do not terminate but have parts that must do so (e.g., a server might have a function for handling a request, and this function must always terminate). Our method uses lightweight annotations to mark parts of the program which must terminate. It is not limited to the use of particular synchronisation primitives, but it is only complete for programs which have finite state space (such programs can have infinite behaviour in which specific state is repeated infinitely). Even under this limitation, we believe this technique can help with the design of high-performance parallel algorithms and data structures.</p>
+<p>The contributions presented in this thesis are implemented in an open-source software model checker DIVINE and are accompanied by experimental evaluation.</p>
+<h3 id="most-significant-publications">Most Significant Publications</h3>
+<ul>
+<li><p><strong>Local Nontermination Detection for Parallel C++ Programs</strong> (Vladimír Štill, Jiří Barnat): [<a href="/publications/2019/lnterm.pdf">PDF</a>] [<a href="https://divine.fi.muni.cz/2019/lnterm">paper page</a>] [<a href="http://dx.doi.org/10.1007/978-3-030-30446-1_20">publisher’s page</a>]</p></li>
+<li><p><strong>Model Checking of C++ Programs Under the x86-TSO Memory Model</strong> (Vladimír Štill, Jiří Barnat): [<a href="/publications/2018/x86tso.pdf">PDF</a>] [<a href="https://divine.fi.muni.cz/2018/x86tso">paper page</a>] [<a href="http://dx.doi.org/10.1007/978-3-030-02450-5_8">publisher’s page</a>]</p></li>
+<li><p><strong>Using Off-the-Shelf Exception Support Components in C++ Verification</strong> (Vladimír Štill, Petr Ročkai, Jiří Barnat): [<a href="/publications/2017/except.pdf">PDF</a>] [<a href="https://divine.fi.muni.cz/2017/exceptions">paper page</a>] [<a href="http://dx.doi.org/10.1109/QRS.2017.15">publisher’s page</a>]</p></li>
+<li><p><strong>DiVM: Model checking with LLVM and graph memory</strong> (Petr Ročkai, Vladimír Štill, Ivana Černá, Jiří Barnat): [<a href="/publications/2017/divm.pdf">PDF</a>] [<a href="https://divine.fi.muni.cz/2017/divm">paper page</a>] [<a href="http://dx.doi.org/10.1016/j.jss.2018.04.026">publisher’s page</a>]</p></li>
+<li><p><strong>Model Checking of C and C++ with DIVINE 4</strong> (Zuzana Baranová, Jiří Barnat, Katarína Kejstová, Tadeáš Kučera, Henrich Lauko, Jan Mrázek, Petr Ročkai, Vladimír Štill): [<a href="/publications/2017/divine4.pdf">PDF</a>] [<a href="https://divine.fi.muni.cz/2017/divine4">paper page</a>] [<a href="http://dx.doi.org/10.1007/978-3-319-68167-2_14">publisher’s page</a>]</p></li>
+</ul>
+<p>The complete list of my publications during my PhD and previous studies can be found on the <a href="/publications.html#2019">publications page (up to the year 2019)</a>.</p>
+<h3 id="miscellaneous">Miscellaneous</h3>
+<p>The source code of the thesis is available <a href="https://github.com/vlstill/phd-thesis/">on GitHub</a>.</p>
+            </div>
+            <div id="foother" class="headfoot">
+                <div class="menuleft">
+                    [<a href="https://github.com/vlstill/web">source on GitHub</a>]
+                </div>
+                <div class="menuright">
+                    © Vladimír Štill, 2018–2021
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<!-- vim: expandtab
+-->
