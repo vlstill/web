@@ -40,6 +40,15 @@ body {
     font-weight: bold;
 }
 
+#header a.icon {
+    display: inline-block;
+}
+
+#header a.icon img {
+    height: 1.3em;
+    vertical-align: middle;
+}
+
 .menuleft {
     float: left;
 }
