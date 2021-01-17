@@ -38,6 +38,13 @@ body {
     padding: 1em;
     font-size: 115%;
     font-weight: bold;
+    display: flex;
+}
+
+#header a {
+    padding: 0.1em;
+    display: inline-flex;
+    height: 1.2em;
 }
 
 #header a.icon {
@@ -45,12 +52,12 @@ body {
 }
 
 #header a.icon img {
-    height: 1.3em;
-    vertical-align: middle;
+    height: 1.2em;
+    vertical-align: top;
 }
 
 .menuleft {
-    float: left;
+    margin-right: auto;
 }
 
 #header #logo a {
@@ -59,7 +66,7 @@ body {
 }
 
 .menuright {
-    text-align: right;
+    margin-left: auto;
 }
 
 #header #navigation a {
@@ -82,6 +89,11 @@ body {
 
 a:link, a:visited, a:active { text-decoration: none; color: darkred; }
 a:link:hover, a:visited:hover, a:active:hover { text-decoration: none; color: darkblue; }
+#header a:link:hover, #header a:visited:hover, #header a:active:hover {
+    text-decoration: none;
+    color: darkblue;
+    background-color: #e5d046;
+}
 
 .cz {
     vertical-align: super;
