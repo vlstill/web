@@ -36,7 +36,8 @@ can contact me directly once you have passed the prerequisites.
 I have no minimal requirements for your teaching experience (but if you have
 them it can be an advantage). I\ also have no minimal requirements for the study
 phase you are in – you can be a\ bachelor student and teach in one of these
-courses.
+courses. Either way, I will expect you to want to learn and extend you abilities
+both in the topics of the course as well as in tutoring skills.
 
 **You should contact me using the e-mail on my [IS
 page](https://is.muni.cz/auth/osoba/373979).**
