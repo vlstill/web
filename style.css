@@ -14,7 +14,7 @@ body {
     max-width: 80ch;
     border-width: 1px;
     border-style: none solid;
-    border-color: #F5DD35;
+    border-color: #F5EE35;
 }
 
 @media ( max-width: 84ch ), ( max-device-width: 84ch ) {
@@ -31,7 +31,7 @@ body {
 
 .headfoot {
     margin-bottom: 0px;
-    background-color: #F5DD35;
+    background-color: #F5EE35;
 }
 
 #header {
