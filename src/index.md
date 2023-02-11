@@ -1,79 +1,101 @@
 ---
 title: Vladimír Štill
 lang: en
-vim: spelllang=en spell fo-=t tw=80 expandtab
+vim: spelllang=en spell fo-=t tw=100 expandtab colorcolumn=100
 ---
 
-My name is Vladimír Štill and I am a lecturer at Faculty of Informatics, Masaryk University in Brno, Czech Republic.
-I work on a variety of courses mainly on programming (C++, Python, Haskell, …) and also in formal languages and theory of programming.
-Furthermore, I maintain an evaluation engine for programming courses, [hsExprTest][hsExprTest].
+I am programmer in modern C++ and in Haskell.
+I live in Brno, Czechia.
+Currently I work at Intel as P4 compiler developer, enabling programmability of high-speed
+networking infrastructure such as switches.
+My previous experiences include teaching of programming and formal languages and research in the
+area of program analysis.
 
-Before my position as a lecturer I did my Ph.D. on the topic of program analysis, more specifically analysis of parallel programs written in C and C++.
-This work included research of new analysis techniques and their implementation in the [DIVINE][divine] model checker.
-My most important contribution is adding support for discovery of bugs
-caused by relaxed memory behaviour (published as [Model Checking of C++ Programs
-Under the x86-TSO Memory Model](https://divine.fi.muni.cz/2018/x86tso/)) and for
-detection of local nontermination in parallel programs (published as [Local
-Nontermination Detection for Parallel C++
-Programs](https://divine.fi.muni.cz/2019/lnterm/)).
-You can see more of my publications of the [publications' page](publications.html).
-You can also see my Ph.D. thesis on [the corresponding page](phd/).
+In my free time, I like to travel and walk in nature (especially in mountains) and to take photos of
+my travels.
+I also like to climb, mainly on indoor climbing walls.
+Furthermore, I am organizing games with [Instruktoři Brno<span
+class="cz">(CZ)</span>][instruktori] and [Nordic Animals Association<span
+class="cz">(CZ)</span>][zverinec].
 
+## Summary of Work Experience
 
-My hobbies include programming (mostly in C++, Python, Perl, and Haskell), walking, photography of nature, and organizing games with my friends from [Nordic Animals Association<span class="cz">(CZ)</span>][zverinec].
+* **2022–now** – **P4 Compiler Developer at [Intel](https://intel.com)**
 
-## Teaching
+  At Intel, we are developing compilers that allow programming of network infrastructure hardware
+  using the [P4](https://p4.org) language.
+  The compiler is written in C++ and based on the open source [p4c]
+  compiler.
+  In this work, I am also occasionally contributing to the [p4c] itself.
 
-* [IB015 Non-Imperative Programming](https://is.muni.cz/predmet/fi/podzim2020/IB015?lang=en) ([IS](https://is.muni.cz/auth/predmet/fi/podzim2020/IB015))
-    Currenlty (since 2020) I am responsible for the seminars and homework in
-    this course and I also teach a few seminards.
-    I was also teaching several seminar groups from 2011 to 2016, and I lead the
-    team responsible for creating of homework since 2014.
+* **2020–2022** – **Lecturer in Programming at [Faculty of Informatics of Masaryk
+  University][fimu]**
 
-* [PV264 Avanced programming in C++](https://www.fi.muni.cz/pv264/)
-  ([IS](https://is.muni.cz/auth/predmet/fi/podzim2020/PV264?lang=en))
-    A course focusing on modern techniques in C++ and advanced knowledge of this programming language.
-    I was one of the founders of this course, I am teaching it since its start in 2017.
-    Before this course, we had covered parts of its topics as part of [PB173 Domain specific development in C/C++](https://is.muni.cz/predmet/fi/jaro2016/PB173?lang=en) since 2014.
+  I was teaching courses related to programming (Haskell, C++, Python) and formal languages.
+  I was also maintaining tools for automatic evaluation of programming exercises in Haskell and
+  formal languages and I was responsible for homework assignments in these courses.
 
-* [IB111 Foundations of Programming](https://is.muni.cz/course/fi/autumn2020/IB111)
-  ([IS](https://is.muni.cz/auth/course/fi/autumn2020/IB111),
-   [Czech course page](https://www.fi.muni.cz/ib111/))
-   I am a seminar tutor for this course since 2020.
+  You can find more about my teaching at my [teaching page](teaching.html).
 
-* [PB161 C++ Programming](https://www.fi.muni.cz/pb161/) ([IS](https://is.muni.cz/auth/predmet/fi/jaro2020/PB161))
-    I am a seminar tutor for this course and I was lecturing the first four lectures in spring 2020.
+* **2016–2020** – **Ph.D. Researcher in Program Analysis at
+  [Faculty of Informatics of Masaryk University][fimu]**
 
-* [PB006 Principles of Programming Languages and OOP](https://is.muni.cz/course/fi/autumn2020/PB006?lang=en)
-  ([IS](https://is.muni.cz/auth/course/fi/autumn2020/PB006))
-  I am responsible for homework for this course in 2020.
+  My [Ph.D. research](phd/) was focused on analysis of parallel C++ programs.
+  In particular my goal was to extend the state of the art in model checking of realistic C++
+  programs with threads.
+  I was one of the developers of the [DIVINE] verification tool for analysis of C++ programs.
+  The tool itself is written in C++ and based on the [LLVM] compiler infrastructure.
 
-* [IB016 Seminar on Functional Programming](https://is.muni.cz/predmet/fi/jaro2019/IB016?lang=en) ([IS](https://is.muni.cz/auth/predmet/fi/jaro2016/IB016))
-    Since 2021 I am teaching some of the seminars and I was teaching
-    this course from 2015 to 2019 and built it to its current state with Martin
-    Ukrop.
+  You can find my Ph.D. thesis at my [research page](phd/) and all my publications at the
+  [publications page](publications.html).
 
-* [IB005 Formal Languages and Automata](https://is.muni.cz/predmet/fi/jaro2020/IB005?lang=en) ([IS](https://is.muni.cz/auth/predmet/fi/jaro2020/IB005))
-    I lead the team responsible for creating of homework since 2020.
+* **2011–2020** – **Teaching Assistant at [Faculty of Informatics of Masaryk University][fimu]**
 
-* [IB102 Automata and Grammars](https://is.muni.cz/predmet/fi/podzim2019/IB102?lang=en) ([IS](https://is.muni.cz/auth/predmet/fi/podzim2019/IB102))
-    I was teaching several seminar groups from 2015 to 2016, and until termination of the course I lead the team responsible for creating of homework.
+  Already during my studies, I was teaching seminars at the faculty.
+  My main topics included functional programming in Haskell, advanced C++ programming (I was one of
+  the creators of advanced C++ course at the faculty) and formal languages.
+  In later years (since 2014) I have headed teams responsible for homework assignment creation and
+  grading for functional programming and formal languages.
 
-*   I had also minor involvement in other courses, such as [PB071 Introduction to the C language](https://is.muni.cz/course/fi/autumn2012/PB071) (seminar tutor, homework author; 2012), [PB161 C++ Programming](https://is.muni.cz/course/fi/autumn2018/PB161) (homework author, backup lecturer; 2016--2018), and [IA006 Selected topics on automata theory](https://is.muni.cz/course/fi/autumn2017/IA006) (marking exams; 2016--2017).
+  You can find more about my teaching at my [teaching page](teaching.html).
+
+[p4c]: https://github.com/p4lang/p4c
+[fimu]: https://fi.muni.cz
+[DIVINE]: https://divine.fi.muni.cz
+[LLVM]: https://llvm.org
+[paradise]: https://paradise.fi.muni.cz
+
 
 ## My Projects
 
-*   [hsExprTest][hsExprTest], a tool for automatic comparisons of Haskell expressions and a building block for testing other programming languages.
-    It focuses mostly on testing of students who are submitting their tasks through e-learning facilities in information system of Masaryk University.
+*   My current work is mainly on proprietary P4 compiler at Intel, but I occasionally contribute to
+    the open-source [p4c] compiler.
+*   [hsExprTest][hsExprTest], a tool for automatic comparisons of Haskell expressions and
+    [ExprTest] which is a building block for testing short tasks in other programming languages.
+    It is also used for non-programming short exercises in teaching of formal languages and
+    statistics courses.
+    These projects focus mostly on testing of students who are submitting their tasks through
+    e-learning facilities in information system of Masaryk University.
     The project was first used in 2014 and I am extending it since then.
-*   I am involved in organizing several free-time activities under the [Nordic Animals Association<span class="cz">(CZ)</span>][zverinec], most importantly the [InterLoS<span class="cz">(CZ)</span>](https://interlos.fi.muni.cz) internet game with puzzles/ciphers and programming tasks, and [KSI<span class="cz">(CZ)</span>](https://ksi.fi.muni.cz) which is an online programming seminar for students who are thinking about studying computer science at the university.
--   [DIVINE][divine], a program analysis tool developed in the [ParaDiSe](https://paradise.fi.muni.cz) laboratory.
-    It focuses on analysis of C and C++ programs.
+*   I am organizing free-time activities with [Instruktoři Brno<span
+    class="cz">(CZ)</span>][instruktori], including [Escape from ZOO<span
+    class="cz">(CZ)</span>](https://zoo.instruktori.cz/).
+*   I was also involved in organizing several free-time activities under the
+    [Nordic Animals Association<span class="cz">(CZ)</span>][zverinec],
+    most importantly the [InterLoS<span class="cz">(CZ)</span>](https://interlos.fi.muni.cz)
+    internet game with puzzles/ciphers and programming tasks (2013–2021), and
+    [KSI<span class="cz">(CZ)</span>](https://ksi.fi.muni.cz) which is an online programming seminar
+    for students who are thinking about studying computer science at the university (2015–2020).
+-   [DIVINE][divine], a program analysis tool developed in the
+    [ParaDiSe](https://paradise.fi.muni.cz) laboratory.  It focuses on analysis of C and C++
+    programs.
     DIVINE is a long team effort, I was part of the DIVINE development team between 2014 and 2020.
 *   More of my projects can be found on my [GitHub page][github].
 
 
 [zverinec]: http://zverinec.fi.muni.cz/
+[instruktori]: https://instruktori.cz
 [divine]: https://divine.fi.muni.cz
 [hsExprTest]: https://github.com/vlstill/hsExprTest
+[ExprTest]: https://github.com/vlstill/exprTest
 [github]: https://github.com/vlstill
