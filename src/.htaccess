@@ -9,12 +9,26 @@
 
 RewriteEngine On
 
+# redirect to https
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+RewriteCond %{REQUEST_URI} !^domains/
+RewriteCond %{REQUEST_URI} !^/domains/
+RewriteCond %{HTTP_HOST} ^(www\.)?(.*).stillovi.cz$
+RewriteCond %{DOCUMENT_ROOT}/domains/stillovi.cz/%2 -d
+RewriteRule (.*) domains/stillovi.cz/%2/$1 [DPI]
+
 # cele domeny (aliasy)
 RewriteCond %{REQUEST_URI} !^domains/
 RewriteCond %{REQUEST_URI} !^/domains/
 RewriteCond %{HTTP_HOST} ^(www\.)?(.*)$
 RewriteCond %{DOCUMENT_ROOT}/domains/%2 -d
 RewriteRule (.*) domains/%2/$1 [DPI]
+
+RewriteCond %{HTTP_HOST} ^zoo.vstill.cz$
+RewriteCond %{REQUEST_URI} ^(|/)team[^/]*$
+RewriteRule team %{REQUEST_URI}/ [DPI,R]
 
 # subdomeny (s nebo bez www na zacatku)
 ## RewriteCond %{REQUEST_URI} !^subdom/
@@ -33,6 +47,15 @@ RewriteRule (.*) domains/%2/$1 [DPI]
 
 AddCharset UTF-8 .html .php .txt .md .css
 
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 0 seconds"
+  ExpiresByType image/x-icon "access plus 2592000 seconds"
+  ExpiresByType image/gif "access plus 2592000 seconds"
+  ExpiresByType image/jpeg "access plus 2592000 seconds"
+  ExpiresByType image/png "access plus 2592000 seconds"
+</IfModule>
+
 ### <IfModule mod_expires.c>
 ###     ExpiresActive On
 ###     ExpiresDefault "access plus 10 seconds"
@@ -43,8 +66,8 @@ AddCharset UTF-8 .html .php .txt .md .css
 
 Redirect 307 /projects/exprtest/ https://github.com/vlstill/hsExprTest
 
-<IfModule mod_headers.c>
-Header set Cache-Control "no-cache, no-store, must-revalidate"
-Header set Pragma "no-cache"
-Header set Expires 0
-</IfModule>
+#<IfModule mod_headers.c>
+#Header set Cache-Control "no-cache, no-store, must-revalidate"
+#Header set Pragma "no-cache"
+#Header set Expires 0
+#</IfModule>
