@@ -4,17 +4,22 @@ lang: en
 vim: spelllang=en spell fo-=t tw=100 expandtab colorcolumn=100
 ---
 
-I am programmer in modern C++ and in Haskell.
+I&nbsp;am a programmer in modern C++ and in Haskell.
 I live in Brno, Czechia.
-Currently I work at Intel as P4 compiler developer, enabling programmability of high-speed
+Currently, I work at Intel as a P4 compiler developer, enabling programmability of high-speed
 networking infrastructure such as switches.
 My previous experiences include teaching of programming and formal languages and research in the
 area of program analysis.
 
-In my free time, I like to travel and walk in nature (especially in mountains) and to take photos of
+I studied at the [Faculty of Informatics of Masaryk University][fimu] since 2010 till 2020.
+From 2010 to 2013, I studied a bachelor in the field of computer networks and communication.
+After that, I continued with a master's programme parallel and distributed systems.
+From 2016 to 2020, I studied Ph.D. with the topic of analysis of parallel C++ programs.
+
+In my free time, I like to travel, walk in nature (especially in mountains), and to take photos of
 my travels.
 I also like to climb, mainly on indoor climbing walls.
-Furthermore, I am organizing games with [Instruktoři Brno<span
+Furthermore, I organise games with [Instruktoři Brno<span
 class="cz">(CZ)</span>][instruktori] and [Nordic Animals Association<span
 class="cz">(CZ)</span>][zverinec].
 
@@ -24,40 +29,40 @@ class="cz">(CZ)</span>][zverinec].
 
   At Intel, we are developing compilers that allow programming of network infrastructure hardware
   using the [P4](https://p4.org) language.
-  The compiler is written in C++ and based on the open source [p4c]
+  The compiler is written in C++ and based on the open-source [p4c]
   compiler.
-  In this work, I am also occasionally contributing to the [p4c] itself.
+  In this work, I&nbsp;am also occasionally contributing to the [p4c] itself.
 
 * **2020–2022** – **Lecturer in Programming at [Faculty of Informatics of Masaryk
   University][fimu]**
 
   I was teaching courses related to programming (Haskell, C++, Python) and formal languages.
-  I was also maintaining tools for automatic evaluation of programming exercises in Haskell and
-  formal languages and I was responsible for homework assignments in these courses.
+  I was also maintaining tools for the automatic evaluation of programming exercises in Haskell and
+  formal languages, and I was responsible for homework assignments in these courses.
 
-  You can find more about my teaching at my [teaching page](teaching.html).
+  You can find more about my teaching on my [teaching page](teaching.html).
 
 * **2016–2020** – **Ph.D. Researcher in Program Analysis at
   [Faculty of Informatics of Masaryk University][fimu]**
 
-  My [Ph.D. research](phd/) was focused on analysis of parallel C++ programs.
-  In particular my goal was to extend the state of the art in model checking of realistic C++
+  My [Ph.D. research](phd/) was focused on the analysis of parallel C++ programs.
+  In particular, my goal was to extend state of the art in model checking of realistic C++
   programs with threads.
   I was one of the developers of the [DIVINE] verification tool for analysis of C++ programs.
   The tool itself is written in C++ and based on the [LLVM] compiler infrastructure.
 
-  You can find my Ph.D. thesis at my [research page](phd/) and all my publications at the
+  You can find my Ph.D. thesis on my [research page](phd/) and all my publications at the
   [publications page](publications.html).
 
 * **2011–2020** – **Teaching Assistant at [Faculty of Informatics of Masaryk University][fimu]**
 
   Already during my studies, I was teaching seminars at the faculty.
-  My main topics included functional programming in Haskell, advanced C++ programming (I was one of
-  the creators of advanced C++ course at the faculty) and formal languages.
-  In later years (since 2014) I have headed teams responsible for homework assignment creation and
+  My main topics included functional programming in Haskell, an advanced C++ programming (I was one
+  of the creators of advanced C++ course at the faculty) and formal languages.
+  In later years (since 2014), I have headed teams responsible for homework assignment creation and
   grading for functional programming and formal languages.
 
-  You can find more about my teaching at my [teaching page](teaching.html).
+  You can find more about my teaching on my [teaching page](teaching.html).
 
 [p4c]: https://github.com/p4lang/p4c
 [fimu]: https://fi.muni.cz
@@ -76,8 +81,8 @@ class="cz">(CZ)</span>][zverinec].
     statistics courses.
     These projects focus mostly on testing of students who are submitting their tasks through
     e-learning facilities in information system of Masaryk University.
-    The project was first used in 2014 and I am extending it since then.
-*   I am organizing free-time activities with [Instruktoři Brno<span
+    The project was first used in 2014 and I&nbsp;am extending it since then.
+*   I&nbsp;am organizing free-time activities with [Instruktoři Brno<span
     class="cz">(CZ)</span>][instruktori], including [Escape from ZOO<span
     class="cz">(CZ)</span>](https://zoo.instruktori.cz/).
 *   I was also involved in organizing several free-time activities under the
